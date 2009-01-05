@@ -1,0 +1,8 @@
+Numb3rs
+=======
+
+Easy conversion from numbers to words.
+
+Currently only supports en-nz/en-uk.
+
+Copyright (c) 2009 Matt Powell, released under the MIT license
