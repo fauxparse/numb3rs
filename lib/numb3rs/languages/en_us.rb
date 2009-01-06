@@ -1,7 +1,7 @@
 module Numb3rs
   module Languages
     class EnUs < EnUk
-      def in_words(number)
+      def in_words(number, *args)
         return "minus " + in_words(-number) if number < 0
         @cached[number] || returning("") do |s|
           s << case number

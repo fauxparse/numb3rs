@@ -75,14 +75,34 @@ describe "Numb3rs" do
         1_000_001 => "miliono unu",
         1_048_576 => "miliono kvardek ok mil kvincent sepdek ses",
       456_789_012 => "kvarcent kvindek ses miliono sepcent okdek naŭ mil dek du"
+    },
+    "ro" => {
+                0 => "zero",
+                1 => { :masculine => "unu", :feminine => "una" },
+                2 => { :masculine => "doi", :feminine => "două" },
+               12 => { :masculine => "doisprezece", :feminine => "douăsprezece" },
+               31 => { :masculine => "treizeci şi unu", :feminine => "treizeci şi una", :neuter => "treizeci şi unu" },
+               42 => { :masculine => "patruzeci şi doi", :feminine => "patruzeci şi două", :neuter => "patruzeci şi două" },
+              100 => { :masculine => "o sută", :feminine => "o sută", :neuter => "o sută" },
+              200 => { :masculine => "două sute", :feminine => "două sute", :neuter => "două sute" },
+          101_010 => "o sută una de mii zece",
+       12_345_678 => "douăsprezece milioane trei sute patruzeci şi cinci de mii şase sute şaptezeci şi opt"
     }
   }
   
   @test_cases.each_pair do |lang, cases|
     describe "(#{lang})" do
       cases.each_pair do |i, a|
-        it "should convert #{i} to '#{a}'" do
-          i.in_words(lang).should == a
+        if a.is_a?(Hash)
+          a.each_pair do |gender, w|
+            it "should convert #{i} (#{gender}) to '#{w}'" do
+              i.in_words(lang, gender).should == w
+            end
+          end
+        else
+          it "should convert #{i} to '#{a}'" do
+            i.in_words(lang).should == a
+          end
         end
       end
     end

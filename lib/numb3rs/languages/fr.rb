@@ -37,7 +37,7 @@ module Numb3rs
         }
       end
       
-      def in_words(number)
+      def in_words(number, *args)
         return "minus " + in_words(-number) if number < 0 # TODO this is NOT French, I am pretty sure
         @cached[number] || returning("") do |s|
           s << case number
