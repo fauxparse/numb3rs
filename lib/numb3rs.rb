@@ -1,8 +1,11 @@
 module Numb3rs
   @languages = {}
   
-  def self.in_words(number, lang = "en-uk")
-    language(lang).in_words(number)
+  attr_accessor :default_language
+  @default_language = "en-uk"
+  
+  def self.in_words(number, lang = nil)
+    language(lang || @default_language).in_words(number)
   end
   
 protected

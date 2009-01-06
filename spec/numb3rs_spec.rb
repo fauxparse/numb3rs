@@ -48,4 +48,8 @@ describe "Numb3rs" do
       end
     end
   end
+  
+  it "should default to UK English" do
+    123.in_words.should == "a hundred and twenty-three"
+  end
 end
