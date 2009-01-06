@@ -46,7 +46,7 @@ module Numb3rs
           when       100..999         then partial_words(number, 100)
           when     1_000..999_999     then partial_words(number, 1000)
           when 1_000_000..999_999_999 then partial_words(number, 1_000_000)
-          else "many"
+          else "trop"
           end
           @cached[number] = s if number < 1000 and @cached[number].nil?
         end
