@@ -58,7 +58,7 @@ module Numb3rs
         if magnitude == 100 && petit == 0
           in_words(grand) + " cents"
         else
-          ([ (magnitude < 1_000_000 && grand == 1 ? "" : in_words(grand) + " ") + in_words(magnitude).sub(/^un /, ""), in_words(petit) ] - %w(zero)).join(petit < 100 ? " " : ", ")
+          ([ (magnitude < 1_000_000 && grand == 1 ? "" : in_words(grand) + " ") + in_words(magnitude).sub(/^un /, ""), in_words(petit) ] - [ in_words(0) ]).join(petit < 100 ? " " : ", ")
         end
       end
     end

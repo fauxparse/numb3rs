@@ -56,6 +56,25 @@ describe "Numb3rs" do
         1_000_001 => "un million un",
         1_048_576 => "un million, quarante-huit mille, cinq cent soixante-seize",
       456_789_012 => "quatre cent cinquante-six million, sept cent quatre-vingt-neuf mille douze"
+    },
+    "epo" => {
+                0 => "nulo",
+               20 => "dudek",
+               21 => "dudek unu",
+               75 => "sepdek kvin",
+               98 => "naŭdek ok",
+              100 => "cent",
+              107 => "cent sep",
+              200 => "ducent",
+              202 => "ducent du",
+              634 => "sescent tridek kvar",
+            1_000 => "mil",
+            2_009 => "du mil naŭ",
+          123_456 => "cent dudek tri mil kvarcent kvindek ses",
+        1_000_000 => "miliono",
+        1_000_001 => "miliono unu",
+        1_048_576 => "miliono kvardek ok mil kvincent sepdek ses",
+      456_789_012 => "kvarcent kvindek ses miliono sepcent okdek naŭ mil dek du"
     }
   }
   
