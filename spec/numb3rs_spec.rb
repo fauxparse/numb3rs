@@ -15,6 +15,8 @@ describe "Numb3rs" do
           123_456 => "a hundred and twenty-three thousand, four hundred and fifty-six",
         1_000_000 => "a million",
         1_000_001 => "a million and one",
+        1_000_053 => "a million and fifty-three",
+        1_000_670 => "one million, six hundred and seventy",
         1_048_576 => "one million, forty-eight thousand, five hundred and seventy-six",
       456_789_012 => "four hundred and fifty-six million, seven hundred and eighty-nine thousand and twelve"
     },
@@ -31,6 +33,8 @@ describe "Numb3rs" do
           123_456 => "one hundred twenty-three thousand, four hundred fifty-six",
         1_000_000 => "a million",
         1_000_001 => "one million one",
+        1_000_053 => "one million fifty-three",
+        1_000_670 => "one million, six hundred seventy",
         1_048_576 => "one million, forty-eight thousand, five hundred seventy-six",
       456_789_012 => "four hundred fifty-six million, seven hundred eighty-nine thousand twelve"
     },
