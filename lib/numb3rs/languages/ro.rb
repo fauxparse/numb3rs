@@ -36,7 +36,7 @@ module Numb3rs
       end
       
       def in_words(number, gender = :masculine)
-        return "minus " + in_words(-number) if number < 0 # TODO figure out what this is
+        return "minus " + in_words(-number) if number < 0
         @cached[gender][number] || returning("") do |s|
           s << case number
           when        11..19          then in_words(number % 10, gender) + "sprezece"

@@ -21,6 +21,7 @@ module Numb3rs
       end
       
       def in_words(number, *args)
+        return "minus " + in_words(-number) if number < 0
         @cached[number] || returning("") do |s|
           s << case number
           when         0..99          then partial_words(number, 10)
