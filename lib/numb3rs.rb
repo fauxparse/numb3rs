@@ -10,6 +10,6 @@ module Numb3rs
   
 protected
   def self.language(lang = "en-uk")
-    @languages[lang] ||= "Numb3rs::Languages::#{lang.downcase.gsub('-', '_').classify}".constantize.new
+    @languages[lang] ||= "Numb3rs::Languages::#{lang.downcase.gsub('-', '_').camelize}".constantize.new
   end
 end

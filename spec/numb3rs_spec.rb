@@ -18,6 +18,22 @@ describe "Numb3rs" do
         1_048_576 => "one million, forty-eight thousand, five hundred and seventy-six",
       456_789_012 => "four hundred and fifty-six million, seven hundred and eighty-nine thousand and twelve"
     },
+    "en-us" => {
+               -1 => "minus one",
+                0 => "zero",
+               20 => "twenty",
+               21 => "twenty-one",
+              100 => "a hundred",
+              107 => "one hundred seven",
+              634 => "six hundred thirty-four",
+            1_000 => "a thousand",
+            2_009 => "two thousand nine",
+          123_456 => "one hundred twenty-three thousand, four hundred fifty-six",
+        1_000_000 => "a million",
+        1_000_001 => "one million one",
+        1_048_576 => "one million, forty-eight thousand, five hundred seventy-six",
+      456_789_012 => "four hundred fifty-six million, seven hundred eighty-nine thousand twelve"
+    },
     "fr" => {
                 0 => "zéro",
                20 => "vingt",
