@@ -21,7 +21,7 @@ describe "Numb3rs" do
       456_789_012 => "four hundred and fifty-six million, seven hundred and eighty-nine thousand and twelve"
     },
     "en-us" => {
-               -1 => "minus one",
+               -1 => "negative one",
                 0 => "zero",
                20 => "twenty",
                21 => "twenty-one",
@@ -87,6 +87,12 @@ describe "Numb3rs" do
               200 => { :masculine => "două sute", :feminine => "două sute", :neuter => "două sute" },
           101_010 => "o sută una de mii zece",
        12_345_678 => "douăsprezece milioane trei sute patruzeci şi cinci de mii şase sute şaptezeci şi opt"
+    },
+    "tlh" => {
+                0 => "pagh",
+               13 => "wa'maH wej",
+               42 => "loSmaH cha'",
+            1_234 => "wa'SaD cha'vatlh wejmaH loS"
     }
   }
   
